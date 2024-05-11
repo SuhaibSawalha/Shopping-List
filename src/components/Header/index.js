@@ -1,7 +1,7 @@
 import "./style.css";
 import favicon from "./../../assets/img/favicon.png";
 import shoppingCart from "./../../assets/img/shopping-cart.png";
-import { useItems } from "./../../ItemsContext";
+import { useItems } from "./../../context/ItemsContext";
 
 const Header = ({ page, setPage }) => {
   const cartItems = useItems();

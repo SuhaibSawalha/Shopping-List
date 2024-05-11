@@ -4,7 +4,7 @@ import ItemsList from "./components/ItemsList";
 import ShoppingList from "./components/ShoppingList";
 import CartList from "./components/CartList";
 import { useState } from "react";
-import { ItemsProvider } from "./ItemsContext";
+import { ItemsProvider } from "./context/ItemsContext";
 
 function App() {
   const [page, setPage] = useState("ShoppingList");
