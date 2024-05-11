@@ -1,0 +1,80 @@
+.item {
+  width: 250px;
+  height: 400px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 20px 0;
+}
+.item img {
+  width: 100%;
+  height: 60%;
+}
+.item > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 40%;
+  padding: 10px 0 20px 0;
+}
+.item h2 {
+  font-family: var(--poetsen);
+}
+.item .price {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.item .price span {
+  color: gold;
+}
+
+.item button {
+  cursor: pointer;
+}
+.item .btn-add {
+  background-color: green;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: white;
+}
+.item .btn-add:disabled {
+  background-color: grey;
+  cursor: not-allowed;
+}
+
+.item .quantity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  background-color: rgb(233, 230, 230);
+  border-radius: 10px;
+  padding: 0 10px;
+}
+.item .btn-decrease {
+  background: none;
+  border: none;
+  color: red;
+  font-size: 1.7rem;
+}
+.item .btn-decrease:disabled {
+  color: grey;
+  cursor: not-allowed;
+}
+.item .quantity p {
+  margin: 0 10px;
+}
+.item .btn-increase {
+  background: none;
+  border: none;
+  color: green;
+  font-size: 1.5rem;
+}
+.item .btn-delete {
+  background-color: red;
+  border-radius: 10px;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 0.7rem;
+}

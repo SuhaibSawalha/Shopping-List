@@ -1,0 +1,71 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  border-bottom: 1px solid black;
+  height: 80px;
+}
+
+header > div {
+  display: flex;
+  align-items: center;
+}
+
+header h1 {
+  margin-left: 20px;
+  font-family: var(--protest);
+}
+
+header button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+header .shopping-cart {
+  background-color: rgb(232, 237, 237);
+  padding: 10px;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .shopping-cart span {
+  background-color: red;
+  color: white;
+  border-radius: 10px;
+  padding: 0 5px;
+  position: absolute;
+  min-width: 20px;
+  height: 20px;
+  top: -10px;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .shopping-list {
+  background-color: rgb(232, 237, 237);
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: var(--open-sans);
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 0 10px;
+  }
+  header img.icon {
+    width: 35px;
+    height: 35px;
+  }
+  header h1 {
+    font-size: 1.2rem;
+    margin-left: 10px;
+  }
+}
