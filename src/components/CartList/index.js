@@ -1,4 +1,4 @@
-import { useItems } from "./../../ItemsContext";
+import { useItems } from "./../../context/ItemsContext";
 import items from "./../../assets/js/constants";
 import Item from "./../Item";
 

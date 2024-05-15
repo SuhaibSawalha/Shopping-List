@@ -1,25 +1,29 @@
 import "./style.css";
-import { useItemsDispatch } from "../../ItemsContext";
-import { useItems } from "../../ItemsContext";
+import { useItems } from "./../../context/ItemsContext";
+import useAddItem from "./../../hooks/useAddItem";
+import useUpdateItem from "./../../hooks/useUpdateItem";
+import useDeleteItem from "./../../hooks/useDeleteItem";
 
 const Item = ({ item, type, quantity }) => {
   const img = require("./../../assets/img/items/" + item.img);
-  const dispatch = useItemsDispatch();
   const cartItems = useItems();
+  const { handleAddItem } = useAddItem();
+  const { handleUpdateItem } = useUpdateItem();
+  const { handleDeleteItem } = useDeleteItem();
 
   const handleAdd = () => {
-    dispatch({ type: "add", id: item.id });
+    handleAddItem(item.id);
   };
 
   const increaseQuantity = () => {
-    dispatch({ type: "update", id: item.id, quantity: quantity + 1 });
+    handleUpdateItem(item.id, quantity + 1);
   };
   const descreaseQuantity = () => {
-    dispatch({ type: "update", id: item.id, quantity: quantity - 1 });
+    handleUpdateItem(item.id, quantity - 1);
   };
 
   const handleDelete = () => {
-    dispatch({ type: "delete", id: item.id });
+    handleDeleteItem(item.id);
   };
 
   return (

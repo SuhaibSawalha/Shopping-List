@@ -1,5 +1,5 @@
 import "./style.css";
-import { useItems } from "../../ItemsContext";
+import { useItems } from "./../../context/ItemsContext";
 import items from "./../../assets/js/constants";
 
 const ItemsList = ({ children, name }) => {
@@ -9,7 +9,7 @@ const ItemsList = ({ children, name }) => {
     <div className="items-list">
       <h1>{name}</h1>
       <div className="items">{children}</div>
-      {name === "Cart Items" && (
+      {name === "Cart Items" && cartItems.length !== 0 && (
         <p className="total-price">
           Total price:{" "}
           {cartItems.reduce(
